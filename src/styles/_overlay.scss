@@ -1,0 +1,103 @@
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: $white;
+  opacity: 0.95;
+  display: none;
+}
+
+.overlay .overlay-content {
+  @include outer-container;
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  @include media($medium-screen-up) {
+    font-size: 2em;
+    letter-spacing: 6px;
+  }
+}
+
+.overlay h3 {
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+// Overlay Button
+.overlay-button {
+  position: relative;
+  float: right;
+  margin: 20px 20px 0 0;
+  display: inline-block;
+  z-index: 2;
+  padding: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  text-align: center;
+  @include transition(all 0.3s ease-in-out);
+
+  &:before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 2px;
+    background-color: $dark-gray;
+  }
+
+  &:hover:before {
+    background-color: $white;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 2px;
+    background-color: $dark-gray;
+    @include transform(rotate(90deg));
+  }
+
+  &:hover:after {
+    background-color: $white;
+  }
+
+  &:hover {
+    background-color: $dark-gray;
+  }
+}
+
+.overlay-button.active {
+  @include transform(rotate(45deg));
+}
+
+// Overlay theme buttons
+#light-theme,
+#dark-theme {
+  @include span-columns(6);
+
+  @include media($medium-screen-up) {
+    @include span-columns(3);
+  }
+}
+
+#light-theme {
+  @include media($medium-screen-up) {
+    @include shift(3);
+  }
+}

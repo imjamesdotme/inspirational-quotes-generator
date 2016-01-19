@@ -1,0 +1,64 @@
+body.dark{
+  @include linear-gradient(to bottom, $dark-gray,  darken($dark-gray, 20));
+}
+
+.dark {
+  #quote,
+  #author {
+    color: $white;
+  }
+}
+
+.dark #new-quote {
+  background-color: $white;
+  color: $dark-gray;
+
+  &:hover {
+    background-color: darken($white, 30%);
+  }
+}
+
+.dark #tweet {
+  color: $white;
+  border-color: $white;
+
+  &:hover {
+    color: $dark-gray;
+    background-color: $white;
+  }
+}
+
+.dark .overlay-button {
+
+  &:before {
+    background-color: $white;
+  }
+
+  &:hover:before {
+    background-color: $dark-gray;
+  }
+
+  &:after {
+    background-color: $white;
+  }
+
+  &:hover:after {
+    background-color: $dark-gray;
+  }
+
+  &:hover {
+    background-color: $white;
+  }
+}
+
+.dark .overlay-button.active {
+  background-color: $dark-gray;
+
+  &:hover:before {
+    background-color: $white;
+  }
+
+  &:hover:after {
+    background-color: $white;
+  }
+}

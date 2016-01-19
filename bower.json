@@ -1,0 +1,24 @@
+{
+  "name": "inspirational-quotes-generator",
+  "authors": [
+    "James L <hello@imjames.me>"
+  ],
+  "description": "Generates random inspirational tech quotes.",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "http://imjames.me",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.6",
+    "normalize-scss": "~3.0.3",
+    "neat": "~1.7.2"
+  }
+}
